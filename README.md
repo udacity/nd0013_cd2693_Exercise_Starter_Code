@@ -1,7 +1,7 @@
 # nd0013_cd2693_Exercise_Starter_Code
 
 ## Dependencies
-Before you proceed to use the exercises in this repository, ensure that your development environment is configured with the following tools and dependencies:
+Before you practice the exercises in this repository, ensure that your development environment is configured with the following tools and dependencies:
 
 - C++ - [VSCode install](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation) or [general install](https://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm) 
 - [OpenCV](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html)
@@ -15,7 +15,10 @@ Before you proceed to use the exercises in this repository, ensure that your dev
 - [PCL](https://pointclouds.org/downloads/) (Point Cloud Library)
 - [Eigen Library for C++](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 
-## Fork and Clone the Repository
+
+## Instructions
+
+### Fork and Clone the Repository
 Fork the repository to your Github account and clone it to your local development environment using the following commands:
 
 ```bash
@@ -23,9 +26,9 @@ git clone https://github.com/udacity/nd0013_cd2693_Exercise_Starter_Code.git
 cd nd0013_cd2693_Exercise_Starter_Code
 ```
 
-# Instructions to Execute the Exercise Solution
+Next, select the lesson you want to practice. The sections below outline the lesson-specific instructions.
 
-## Lesson_2_C++_Checkpoint Exercises
+### Lesson_2_C++_Checkpoint Exercises
 
 Navigate to the individual challenge sub-directory containing the **main.cpp** file. For example, change to the **challenge1/** solution directory.
 
@@ -41,7 +44,7 @@ g++ main.cpp
 ```
 
 
-## Lesson_3_Markov_Localization Exercises
+### Lesson_3_Markov_Localization Exercises
 
 Change to the specific exercise directory, compile the **main.cpp** file, and execute the **a.out**. For example, the command below will help you run the  **1-initialize-priors-function** exercise solution. 
 
@@ -58,7 +61,7 @@ g++ main.cpp
 ```
 
 
-## Lesson_4_Intro_to_PCL Exercises
+### Lesson_4_Intro_to_PCL Exercises
 
 Refer to the exercise starter files in the [](https://github.com/udacity/SFND_Lidar_Obstacle_Detection) repository. 
 
@@ -95,7 +98,7 @@ Here is the file structure in the Github repository linked above.
 Refer the [README.md](https://github.com/udacity/SFND_Lidar_Obstacle_Detection#readme) for specific instructions. 
 
 
-## Lesson_5_Creating_Scan_Matching_Algorithms
+### Lesson_5_Creating_Scan_Matching_Algorithms
 
 ```bash
 cd Lesson_5_Creating_Scan_Matching_Algorithms
@@ -128,7 +131,7 @@ alias pip='python -m pip'
 cd /home/workspace
 ```
 
-## Lesson_6_Utilizing_Scan_Matching
+### Lesson_6_Utilizing_Scan_Matching
 
 ```bash
 cd Lesson_6_Utilizing_Scan_Matching
@@ -147,7 +150,7 @@ The specific command for each exercise in available in the respective sub-direct
 
 In addition, update the environment variables, where needed. 
 
-## Lesson_7_Project_Scan_Matching_Localization
+### Lesson_7_Project_Scan_Matching_Localization
 
 ```bash
 cd Lesson_7_Project_Scan_Matching_Localization
