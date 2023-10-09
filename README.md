@@ -16,9 +16,9 @@ Before you practice the exercises in this repository, ensure that your developme
 - [Eigen Library for C++](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 
 
-## Instructions
+# Instructions
 
-### Fork and Clone the Repository
+## Fork and Clone the Repository
 Fork the repository to your Github account and clone it to your local development environment using the following commands:
 
 ```bash
@@ -28,7 +28,7 @@ cd nd0013_cd2693_Exercise_Starter_Code
 
 Next, select the lesson you want to practice. The sections below outline the lesson-specific instructions.
 
-### Lesson_2_C++_Checkpoint Exercises
+## Lesson_2_C++_Checkpoint Exercises
 
 Navigate to the individual challenge sub-directory containing the **main.cpp** file. For example, change to the **challenge1/** solution directory.
 
@@ -43,8 +43,9 @@ g++ main.cpp
 ./a.out
 ```
 
+<br />
 
-### Lesson_3_Markov_Localization Exercises
+## Lesson_3_Markov_Localization Exercises
 
 Change to the specific exercise directory, compile the **main.cpp** file, and execute the **a.out**. For example, the command below will help you run the  **1-initialize-priors-function** exercise solution. 
 
@@ -60,8 +61,9 @@ g++ main.cpp
 ./a.out
 ```
 
+<br />
 
-### Lesson_4_Intro_to_PCL Exercises
+## Lesson_4_Intro_to_PCL Exercises
 
 Refer to the exercise starter files in the [](https://github.com/udacity/SFND_Lidar_Obstacle_Detection) repository. 
 
@@ -97,8 +99,9 @@ Here is the file structure in the Github repository linked above.
 ```
 Refer the [README.md](https://github.com/udacity/SFND_Lidar_Obstacle_Detection#readme) for specific instructions. 
 
+<br />
 
-### Lesson_5_Creating_Scan_Matching_Algorithms
+## Lesson_5_Creating_Scan_Matching_Algorithms
 
 ```bash
 cd Lesson_5_Creating_Scan_Matching_Algorithms
@@ -113,25 +116,11 @@ This lesson has the following exercises.
 └── Exercise-Intro-to-ICP
 ```
 
-The specific command for each exercise in available in the respective sub-directory. However, here is the generic instructions applicable to all exercises in this lesson. The commands below will update the PATH, CUDA_HOME, and LD_LIBRARY_PATH environment variables.
+The specific commands for each exercise in available in the respective sub-directory. 
 
-```bash
-export PATH=/opt/ros/kinetic/bin:/usr/local/cuda-9.0/bin:/opt/pytorch/bin:/opt/utils/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/VirtualGL/bin:/opt/TurboVNC/bin:/opt/swift/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin${PATH:+:${PATH}}
+<br />
 
-source /opt/carndcapstone/venv/bin/activate
-
-export LD_LIBRARY_PATH=/opt/carndcapstone/cuda-8.0/extras/CUPTI/lib64/:/opt/carndcapstone/cuda-8.0/lib64/:/opt/ros/kinetic/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-export CUDA_HOME=/opt/carndcapstone/cuda-8.0
-
-ln -sf /home/workspace/simulator.desktop /root/Desktop/simulator.desktop
-
-alias pip='python -m pip'
-
-cd /home/workspace
-```
-
-### Lesson_6_Utilizing_Scan_Matching
+## Lesson_6_Utilizing_Scan_Matching
 
 ```bash
 cd Lesson_6_Utilizing_Scan_Matching
@@ -150,7 +139,9 @@ The specific command for each exercise in available in the respective sub-direct
 
 In addition, update the environment variables, where needed. 
 
-### Lesson_7_Project_Scan_Matching_Localization
+<br />
+
+## Lesson_7_Project_Scan_Matching_Localization
 
 ```bash
 cd Lesson_7_Project_Scan_Matching_Localization
