@@ -3,7 +3,7 @@
 1. Navigate to the **nd0013_cd2693_Exercise_Starter_Code/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Creating-ICP** directory. 
 
 
-2. Complete the TODO's in `icp2-main.cpp` per the instructions in the classroom. 
+2. Complete the TODO's in **icp2-main.cpp** per the instructions in the classroom. 
 
 
 3. Once you finish editing the CPP file, you can compile and run the program using the commands below: 

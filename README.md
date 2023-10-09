@@ -3,17 +3,17 @@
 ## Dependencies
 Before you practice the exercises in this repository, ensure that your development environment is configured with the following tools and dependencies:
 
-- C++ - [VSCode install](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation) or [general install](https://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm) 
+- [CARLA simulator 0.9.9.4](https://github.com/carla-simulator/carla/releases/tag/0.9.9) (Point Cloud Library)
+- [NICE DCV Server](https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-installing-linux-prereq.html). This step will install Nvidia drivers along with CUDA libraries for the underlying Tesla T4 GPU
+- C++ 
+- Git
 - [OpenCV](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html)
-- [CMake](https://cmake.org/install/)
-- Make - Use either one of the following options:
-    - [Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
-    - [Mac](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac)
-    - [Linux](https://askubuntu.com/questions/161104/how-do-i-install-make)
+- [CMake](https://askubuntu.com/questions/161104/how-do-i-install-make) and Make
 - [VSCode](https://code.visualstudio.com/download), or a similar IDE
-- The [CARLA simulator](https://carla.org/)
-- [PCL](https://pointclouds.org/downloads/) (Point Cloud Library)
 - [Eigen Library for C++](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+- [Point Cloud Library](https://pointclouds.org/downloads/)
+Python3 and Pip
+- ROS
 
 
 # Instructions
@@ -116,7 +116,7 @@ This lesson has the following exercises.
 └── Exercise-Creating-NDT
 ```
 
-The specific commands for each exercise in available in the respective sub-directory. 
+The specific commands for each exercise are available in the respective sub-directory. 
 
 <br />
 
