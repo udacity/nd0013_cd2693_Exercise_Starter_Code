@@ -9,7 +9,7 @@
 namespace carla {
 
   constexpr const char *version() {
-    return "0.9.9.4-296-g201bc254-dirty";
+    return "0.9.9.4";
   }
 
 } // namespace carla
