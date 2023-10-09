@@ -148,8 +148,8 @@ int main(){
 			Eigen::Matrix4d transform= Eigen::Matrix4d::Identity ();
 			// TODO: Set transform to pose using transform3D()
 			for (auto detection : *scan){
-				if((detection.point.x*detection.point.x + detection.point.y*detection.point.y + detection.point.z*detection.point.z) > 8.0){ // Don't include points touching ego
-					Eigen::Vector4d local_point(detection.point.x, detection.point.y, detection.point.z, 1);
+				if((detection.x*detection.x + detection.y*detection.y + detection.z*detection.z) > 8.0){ // Don't include points touching ego
+					Eigen::Vector4d local_point(detection.x, detection.y, detection.z, 1);	
 					Eigen::Vector4d transform_point = local_point; // TODO: Multiply local_point by transform
 					pclCloud.points.push_back(PointT(transform_point[0], transform_point[1], transform_point[2]));
 				}
