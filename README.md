@@ -111,9 +111,9 @@ This lesson has the following exercises.
 
 ```bash
 .
+├── Exercise-Intro-to-ICP
 ├── Exercise-Creating-ICP
-├── Exercise-Creating-NDT
-└── Exercise-Intro-to-ICP
+└── Exercise-Creating-NDT
 ```
 
 The specific commands for each exercise in available in the respective sub-directory. 
