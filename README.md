@@ -147,19 +147,23 @@ In addition, update the environment variables, where needed.
 cd Lesson_7_Project_Scan_Matching_Localization
 ```
 
-Compile
+Compile the project using the following commands. 
+
 ```bash
 cd c3-project
 cmake .
 make
 ```
-Run
+Open a new terminal window and execute the following:
 
-```java
-su - student // Ignore Permission Denied, if you see student@ you are good
-cd c3-project
+```bash
 ./run_carla.sh
-// Create new tab
-cd c3-project
-./cloud_loc // Might have core dump on start up, just rerun if so. Crash doesn't happen more than a couple of times
-``````
+```
+
+Open another Terminal window and execute the following:
+```bash
+./cloud_loc 
+```
+Might have core dump on start up, just rerun if so. Crash doesn't happen more than a couple of times. Here is a glimpse of the running project.
+
+![a glimpse of the running project](./assets/L7_Project.png)
