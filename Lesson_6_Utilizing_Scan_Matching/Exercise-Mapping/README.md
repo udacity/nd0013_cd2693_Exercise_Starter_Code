@@ -91,11 +91,17 @@ In such a case, you must follow the steps below to push your edits to the remote
     ```bash
     git lfs track "*.a"
     git add .
-    git commit -m "my message for lfs"
+    git commit -m "lfs"
     ```    
 
 
 3. Push
     ```bash
     git lfs push --all origin main
+    ```
+
+
+4. If the LFS push does not succeeds due to OAuth or related issue, you can try the following command. 
+    ```bash
+    git push -f --no-verify
     ```
