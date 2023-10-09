@@ -159,16 +159,16 @@ cd Lesson_7_Project_Scan_Matching_Localization
 Compile
 ```bash
 cd c3-project
+./make-libcarla-install.sh
 cmake .
 make
 ```
 Run
 
 ```java
-su - student // Ignore Permission Denied, if you see student@ you are good
-cd c3-project
 ./run_carla.sh
 // Create new tab
 cd c3-project
 ./cloud_loc // Might have core dump on start up, just rerun if so. Crash doesn't happen more than a couple of times
 ``````
+![Project_loaded](https://github.com/udacity/nd0013_cd2693_Exercise_Starter_Code/assets/31706646/69e082fd-15e6-4177-8522-c627868c88d6)
