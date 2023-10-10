@@ -291,10 +291,6 @@ namespace detail {
     _client.UnSubscribeFromStream(sensor.GetActorDescription().GetStreamToken());
   }
 
-  void Simulator::FreezeAllTrafficLights(bool frozen) {
-    _client.FreezeAllTrafficLights(frozen);
-  }
-
 } // namespace detail
 } // namespace client
 } // namespace carla

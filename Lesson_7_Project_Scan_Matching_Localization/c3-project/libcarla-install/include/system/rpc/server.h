@@ -107,14 +107,6 @@ public:
     //! \brief Closes all sessions gracefully.
     void close_sessions();
 
-    using callback_type = std::function<void(std::shared_ptr<detail::server_session>)>;
-
-    //! \brief Set a callback for every client connection
-    void set_on_connection(callback_type);
-
-    //! \brief Set a callback for every client disconnection
-    void set_on_disconnection(callback_type);
-
     friend class detail::server_session;
 
 private:

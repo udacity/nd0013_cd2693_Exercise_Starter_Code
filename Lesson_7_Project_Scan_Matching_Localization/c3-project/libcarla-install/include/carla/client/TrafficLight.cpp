@@ -48,8 +48,7 @@ namespace client {
   }
 
   void TrafficLight::Freeze(bool freeze) {
-    //GetEpisode().Lock()->FreezeTrafficLight(*this, freeze);
-    GetEpisode().Lock()->FreezeAllTrafficLights(freeze);
+    GetEpisode().Lock()->FreezeTrafficLight(*this, freeze);
   }
 
   bool TrafficLight::IsFrozen() const {
@@ -69,10 +68,6 @@ namespace client {
       result.push_back(boost::static_pointer_cast<TrafficLight>(actor));
     }
     return result;
-  }
-
-  void TrafficLight::ResetGroup() {
-    GetEpisode().Lock()->ResetTrafficLightGroup(*this);
   }
 
 } // namespace client

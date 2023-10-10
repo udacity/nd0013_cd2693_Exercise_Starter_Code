@@ -17,11 +17,12 @@ namespace data {
 
   /// Measurement produced by a Lidar. Consists of an array of 3D points plus
   /// some extra meta-information about the Lidar.
-  class LidarMeasurement : public Array<data::LidarDetection>  {
-    static_assert(sizeof(data::LidarDetection) == 4u * sizeof(float), "Location size missmatch");
-    using Super = Array<data::LidarDetection>;
+  class LidarMeasurement : public Array<rpc::Location>  {
+    static_assert(sizeof(rpc::Location) == 3u * sizeof(float), "Location size missmatch");
+    using Super = Array<rpc::Location>;
 
   protected:
+
     using Serializer = s11n::LidarSerializer;
 
     friend Serializer;
@@ -38,6 +39,7 @@ namespace data {
     }
 
   public:
+
     /// Horizontal angle of the Lidar at the time of the measurement.
     auto GetHorizontalAngle() const {
       return GetHeader().GetHorizontalAngle();

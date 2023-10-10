@@ -62,9 +62,6 @@ namespace client {
     /// @note This function calls the simulator
     std::vector<SharedPtr<TrafficLight>> GetGroupTrafficLights();
 
-    // resets the timers and states of all groups
-    void ResetGroup();
-
   };
 
 } // namespace client

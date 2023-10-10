@@ -33,6 +33,8 @@ namespace detail {
 
     carla::streaming::Stream MakeStream();
 
+    carla::streaming::MultiStream MakeMultiStream();
+
     bool RegisterSession(std::shared_ptr<Session> session);
 
     void DeregisterSession(std::shared_ptr<Session> session);

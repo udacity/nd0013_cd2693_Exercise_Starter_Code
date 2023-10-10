@@ -3,22 +3,22 @@
 ## Dependencies
 Before you practice the exercises in this repository, ensure that your development environment is configured with the following tools and dependencies:
 
-- C++ - [VSCode install](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation) or [general install](https://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm) 
+- [CARLA simulator 0.9.9.4](https://github.com/carla-simulator/carla/releases/tag/0.9.9) (Point Cloud Library)
+- [NICE DCV Server](https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-installing-linux-prereq.html). This step will install Nvidia drivers along with CUDA libraries for the underlying Tesla T4 GPU
+- C++ 
+- Git
 - [OpenCV](https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html)
-- [CMake](https://cmake.org/install/)
-- Make - Use either one of the following options:
-    - [Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
-    - [Mac](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac)
-    - [Linux](https://askubuntu.com/questions/161104/how-do-i-install-make)
+- [CMake](https://askubuntu.com/questions/161104/how-do-i-install-make) and Make
 - [VSCode](https://code.visualstudio.com/download), or a similar IDE
-- The [CARLA simulator](https://carla.org/)
-- [PCL](https://pointclouds.org/downloads/) (Point Cloud Library)
 - [Eigen Library for C++](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+- [Point Cloud Library](https://pointclouds.org/downloads/)
+Python3 and Pip
+- ROS
 
 
-## Instructions
+# Instructions
 
-### Fork and Clone the Repository
+## Step 1: Fork and Clone the Repository
 Fork the repository to your Github account and clone it to your local development environment using the following commands:
 
 ```bash
@@ -27,6 +27,8 @@ cd nd0013_cd2693_Exercise_Starter_Code
 ```
 
 Next, select the lesson you want to practice. The sections below outline the lesson-specific instructions.
+
+## Step 2: Practice the Exerciseor the Project
 
 ### Lesson_2_C++_Checkpoint Exercises
 
@@ -43,6 +45,7 @@ g++ main.cpp
 ./a.out
 ```
 
+<br /><br />
 
 ### Lesson_3_Markov_Localization Exercises
 
@@ -60,6 +63,7 @@ g++ main.cpp
 ./a.out
 ```
 
+<br /><br />
 
 ### Lesson_4_Intro_to_PCL Exercises
 
@@ -97,6 +101,7 @@ Here is the file structure in the Github repository linked above.
 ```
 Refer the [README.md](https://github.com/udacity/SFND_Lidar_Obstacle_Detection#readme) for specific instructions. 
 
+<br /><br />
 
 ### Lesson_5_Creating_Scan_Matching_Algorithms
 
@@ -108,28 +113,21 @@ This lesson has the following exercises.
 
 ```bash
 .
+├── Exercise-Intro-to-ICP
 ├── Exercise-Creating-ICP
-├── Exercise-Creating-NDT
-└── Exercise-Intro-to-ICP
+└── Exercise-Creating-NDT
 ```
 
-The specific command for each exercise in available in the respective sub-directory. However, here is the generic instructions applicable to all exercises in this lesson. The commands below will update the PATH, CUDA_HOME, and LD_LIBRARY_PATH environment variables.
+The specific commands for each exercise are available in the respective sub-directory. Follow the instructions per the respective README files.
 
-```bash
-export PATH=/opt/ros/kinetic/bin:/usr/local/cuda-9.0/bin:/opt/pytorch/bin:/opt/utils/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/VirtualGL/bin:/opt/TurboVNC/bin:/opt/swift/swift-4.0.3-RELEASE-ubuntu16.04/usr/bin${PATH:+:${PATH}}
+|Exercise|README|
+|---------|---------|
+|Exercise-Intro-to-ICP|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Intro-to-ICP/README.md)|
+|Exercise-Creating-ICP|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Creating-ICP/README.md)|
+|Exercise-Creating-NDT|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Creating-NDT/README.md)|
 
-source /opt/carndcapstone/venv/bin/activate
 
-export LD_LIBRARY_PATH=/opt/carndcapstone/cuda-8.0/extras/CUPTI/lib64/:/opt/carndcapstone/cuda-8.0/lib64/:/opt/ros/kinetic/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-export CUDA_HOME=/opt/carndcapstone/cuda-8.0
-
-ln -sf /home/workspace/simulator.desktop /root/Desktop/simulator.desktop
-
-alias pip='python -m pip'
-
-cd /home/workspace
-```
+<br /><br />
 
 ### Lesson_6_Utilizing_Scan_Matching
 
@@ -146,29 +144,24 @@ This lesson has the following exercises.
 └── Exercise-NDT-Alignment
 ```
 
-The specific command for each exercise in available in the respective sub-directory. 
+The specific command for each exercise in available in the respective sub-directory. Follow the instructions per the respective README files.
 
-In addition, update the environment variables, where needed. 
+|Exercise|README|
+|---------|---------|
+|Exercise-ICP-Alignment|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-ICP-Alignment/README.md)|
+|Exercise-NDT-Alignment|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-NDT-Alignment/README.md)|
+|Exercise-Mapping|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-Mapping/README.md)|
+
+
+
+<br /><br />
 
 ### Lesson_7_Project_Scan_Matching_Localization
 
+Navigate to the project starter code director. 
+
 ```bash
-cd Lesson_7_Project_Scan_Matching_Localization
+cd nd0013_cd2693_Exercise_Starter_Code/Lesson_7_Project_Scan_Matching_Localization/c3-project
 ```
 
-Compile
-```bash
-cd c3-project
-cmake .
-make
-```
-Run
-
-```java
-su - student // Ignore Permission Denied, if you see student@ you are good
-cd c3-project
-./run_carla.sh
-// Create new tab
-cd c3-project
-./cloud_loc // Might have core dump on start up, just rerun if so. Crash doesn't happen more than a couple of times
-``````
+Follow the instructions per the specific [README](/Lesson_7_Project_Scan_Matching_Localization/c3-project/README.md). 

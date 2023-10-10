@@ -84,8 +84,8 @@ namespace client {
       return _simulator->GetCurrentEpisode();
     }
 
-    std::string StartRecorder(std::string name, bool additional_data = false) {
-      return _simulator->StartRecorder(name, additional_data);
+    std::string StartRecorder(std::string name) {
+      return _simulator->StartRecorder(name);
     }
 
     void StopRecorder(void) {
@@ -106,10 +106,6 @@ namespace client {
 
     std::string ReplayFile(std::string name, double start, double duration, uint32_t follow_id) {
       return _simulator->ReplayFile(name, start, duration, follow_id);
-    }
-
-    void StopReplayer(bool keep_actors) {
-      _simulator->StopReplayer(keep_actors);
     }
 
     void SetReplayerTimeFactor(double time_factor) {

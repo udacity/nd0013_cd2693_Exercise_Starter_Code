@@ -202,11 +202,6 @@ namespace detail {
         rpc::ActorId traffic_light,
         bool freeze);
 
-    void ResetTrafficLightGroup(
-        rpc::ActorId traffic_light);
-
-    void FreezeAllTrafficLights(bool frozen);
-
     /// Returns a list of pairs where the firts element is the vehicle ID
     /// and the second one is the light state
     rpc::VehicleLightStateList GetVehiclesLightStates();
@@ -214,7 +209,7 @@ namespace detail {
     std::vector<ActorId> GetGroupTrafficLights(
         rpc::ActorId traffic_light);
 
-    std::string StartRecorder(std::string name, bool additional_data);
+    std::string StartRecorder(std::string name);
 
     void StopRecorder();
 
@@ -229,8 +224,6 @@ namespace detail {
     void SetReplayerTimeFactor(double time_factor);
 
     void SetReplayerIgnoreHero(bool ignore_hero);
-
-    void StopReplayer(bool keep_actors);
 
     void SubscribeToStream(
         const streaming::Token &token,

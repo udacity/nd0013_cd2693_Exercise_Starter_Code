@@ -64,6 +64,10 @@ namespace low_level {
       return _dispatcher.MakeStream();
     }
 
+    MultiStream MakeMultiStream() {
+      return _dispatcher.MakeMultiStream();
+    }
+
   private:
 
     void StartServer() {

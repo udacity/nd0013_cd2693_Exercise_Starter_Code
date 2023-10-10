@@ -10,20 +10,19 @@
 
 #include <fstream>
 #include <iterator>
-#include <iomanip>
 
 namespace carla {
 namespace pointcloud {
 
   class PointCloudIO {
-
   public:
+
     template <typename PointIt>
     static void Dump(std::ostream &out, PointIt begin, PointIt end) {
-      WriteHeader(out, begin, end);
+      DEBUG_ASSERT(std::distance(begin, end) >= 0);
+      WriteHeader(out, static_cast<size_t>(std::distance(begin, end)));
       for (; begin != end; ++begin) {
-        begin->WriteDetection(out);
-        out << '\n';
+        out << begin->x << ' ' << begin->y << ' ' << begin->z << '\n';
       }
     }
 
@@ -36,15 +35,8 @@ namespace pointcloud {
     }
 
   private:
-    template <typename PointIt> static void WriteHeader(std::ostream &out, PointIt begin, PointIt end) {
-      DEBUG_ASSERT(std::distance(begin, end) >= 0);
-      out << "ply\n"
-           "format ascii 1.0\n"
-           "element vertex " << std::to_string(static_cast<size_t>(std::distance(begin, end))) << "\n";
-      begin->WritePlyHeaderInfo(out);
-      out << "\nend_header\n";
-      out << std::fixed << std::setprecision(4u);
-    }
+
+    static void WriteHeader(std::ostream &out, size_t number_of_points);
   };
 
 } // namespace pointcloud

@@ -1,18 +1,24 @@
 # Exercise: ICP Alignment
 
-Complete the TODO's in `sm1-main.cpp` as detailed on the previous page.
 
-## How to compile:
+1. Naviagte to the **nd0013_cd2693_Exercise_Starter_Code/Lesson_6_Utilizing_Scan_Matching/Exercise-ICP-Alignment** directory. 
 
-** Make Sure GPU Is Enabled**
 
-from `/home/workspace `:
+2. Complete the TODO's in **sm1-main.cpp** per the instructions in the classroom. 
 
-`cmake .`
 
-`make`
+3. Once you finish editing the CPP file, you can compile and run the program using the commands below: 
+    ```bash
+    # Compile
+    cmake .
+    make
+    # Run
+    ./scan_matching_1
+    ```
 
-## How to run:
-`./scan_matching_1`
+4. Verify. The screenshot below shows the successful running ICP exercise.
 
-Note that any visualizations will appear only the remote desktop; if you work in the workspace IDE you will need to click on the "Desktop" button in the bottom right, and only run the executable from the terminal within the remote desktop to view them.
+    ![A screenshot of successful running ICP exercise.](../../assets/L6_ICP.png)
+
+
+5. If you need help, you can refer to the solution in the **solution/** sub-directory and try again. 

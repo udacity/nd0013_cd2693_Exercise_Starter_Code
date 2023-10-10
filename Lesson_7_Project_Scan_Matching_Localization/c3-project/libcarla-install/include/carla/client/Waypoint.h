@@ -6,106 +6,117 @@
 
 #pragma once
 
-#include <boost/optional.hpp>
-
 #include "carla/Memory.h"
 #include "carla/NonCopyable.h"
 #include "carla/geom/Transform.h"
-#include "carla/road/Lane.h"
-#include "carla/road/RoadTypes.h"
 #include "carla/road/element/LaneMarking.h"
 #include "carla/road/element/RoadInfoMarkRecord.h"
 #include "carla/road/element/Waypoint.h"
+#include "carla/road/Lane.h"
+#include "carla/road/RoadTypes.h"
+
+#include <boost/optional.hpp>
 
 namespace carla {
 namespace client {
 
-class Map;
-class Junction;
-class Landmark;
+  class Map;
+  class Junction;
+  class Landmark;
 
-class Waypoint : public EnableSharedFromThis<Waypoint>, private NonCopyable {
- public:
-  ~Waypoint();
+  class Waypoint
+    : public EnableSharedFromThis<Waypoint>,
+    private NonCopyable {
+  public:
 
-  /// Returns an unique Id identifying this waypoint.
-  ///
-  /// The Id takes into account OpenDrive's road Id, lane Id, and s distance
-  /// on its road segment up to half-centimetre precision.
-  uint64_t GetId() const {
-    return std::hash<road::element::Waypoint>()(_waypoint);
-  }
+    ~Waypoint();
 
-  auto GetRoadId() const { return _waypoint.road_id; }
+    /// Returns an unique Id identifying this waypoint.
+    ///
+    /// The Id takes into account OpenDrive's road Id, lane Id, and s distance
+    /// on its road segment up to half-centimetre precision.
+    uint64_t GetId() const {
+      return std::hash<road::element::Waypoint>()(_waypoint);
+    }
 
-  auto GetSectionId() const { return _waypoint.section_id; }
+    auto GetRoadId() const {
+      return _waypoint.road_id;
+    }
 
-  auto GetLaneId() const { return _waypoint.lane_id; }
+    auto GetSectionId() const {
+      return _waypoint.section_id;
+    }
 
-  auto GetDistance() const { return _waypoint.s; }
+    auto GetLaneId() const {
+      return _waypoint.lane_id;
+    }
 
-  const geom::Transform &GetTransform() const { return _transform; }
+    auto GetDistance() const {
+      return _waypoint.s;
+    }
 
-  road::JuncId GetJunctionId() const;
+    const geom::Transform &GetTransform() const {
+      return _transform;
+    }
 
-  bool IsJunction() const;
+    road::JuncId GetJunctionId() const;
 
-  SharedPtr<Junction> GetJunction() const;
+    bool IsJunction() const;
 
-  double GetLaneWidth() const;
+    SharedPtr<Junction> GetJunction() const;
 
-  road::Lane::LaneType GetType() const;
+    double GetLaneWidth() const;
 
-  std::vector<SharedPtr<Waypoint>> GetNext(double distance) const;
+    road::Lane::LaneType GetType() const;
 
-  std::vector<SharedPtr<Waypoint>> GetPrevious(double distance) const;
+    std::vector<SharedPtr<Waypoint>> GetNext(double distance) const;
 
-  /// Returns a list of waypoints separated by distance from the current
-  /// waypoint to the end of the lane
-  std::vector<SharedPtr<Waypoint>> GetNextUntilLaneEnd(double distance) const;
+    std::vector<SharedPtr<Waypoint>> GetPrevious(double distance) const;
 
-  /// Returns a list of waypoints separated by distance from the current
-  /// waypoint to the start of the lane
-  std::vector<SharedPtr<Waypoint>> GetPreviousUntilLaneStart(
-      double distance) const;
+    /// Returns a list of waypoints separated by distance from the current waypoint
+    /// to the end of the lane
+    std::vector<SharedPtr<Waypoint>> GetNextUntilLaneEnd(double distance) const;
 
-  SharedPtr<Waypoint> GetRight() const;
+    /// Returns a list of waypoints separated by distance from the current waypoint
+    /// to the start of the lane
+    std::vector<SharedPtr<Waypoint>> GetPreviousUntilLaneStart(double distance) const;
 
-  SharedPtr<Waypoint> GetLeft() const;
+    SharedPtr<Waypoint> GetRight() const;
 
-  boost::optional<road::element::LaneMarking> GetRightLaneMarking() const;
+    SharedPtr<Waypoint> GetLeft() const;
 
-  boost::optional<road::element::LaneMarking> GetLeftLaneMarking() const;
+    boost::optional<road::element::LaneMarking> GetRightLaneMarking() const;
 
-  road::element::LaneMarking::LaneChange GetLaneChange() const;
+    boost::optional<road::element::LaneMarking> GetLeftLaneMarking() const;
 
-  /// Returns a list of landmarks from the current position to a certain
-  /// distance
-  std::vector<SharedPtr<Landmark>> GetAllLandmarksInDistance(
-      double distance, bool stop_at_junction = false) const;
+    road::element::LaneMarking::LaneChange GetLaneChange() const;
 
-  /// Returns a list of landmarks from the current position to a certain
-  /// distance Filters by specified type
-  std::vector<SharedPtr<Landmark>> GetLandmarksOfTypeInDistance(
-      double distance, std::string filter_type,
-      bool stop_at_junction = false) const;
+    /// Returns a list of landmarks from the current position to a certain distance
+    std::vector<SharedPtr<Landmark>> GetAllLandmarksInDistance(
+        double distance, bool stop_at_junction = false) const;
 
- private:
-  friend class Map;
+    /// Returns a list of landmarks from the current position to a certain distance
+    /// Filters by specified type
+    std::vector<SharedPtr<Landmark>> GetLandmarksOfTypeInDistance(
+        double distance, std::string filter_type, bool stop_at_junction = false) const;
 
-  Waypoint(SharedPtr<const Map> parent, road::element::Waypoint waypoint);
+  private:
 
-  SharedPtr<const Map> _parent;
+    friend class Map;
 
-  road::element::Waypoint _waypoint;
+    Waypoint(SharedPtr<const Map> parent, road::element::Waypoint waypoint);
 
-  geom::Transform _transform;
+    SharedPtr<const Map> _parent;
 
-  // Mark record right and left respectively.
-  std::pair<const road::element::RoadInfoMarkRecord *,
-            const road::element::RoadInfoMarkRecord *>
-      _mark_record;
-};
+    road::element::Waypoint _waypoint;
 
-}  // namespace client
-}  // namespace carla
+    geom::Transform _transform;
+
+    // Mark record right and left respectively.
+    std::pair<
+        const road::element::RoadInfoMarkRecord *,
+        const road::element::RoadInfoMarkRecord *> _mark_record;
+  };
+
+} // namespace client
+} // namespace carla
