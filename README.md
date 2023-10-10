@@ -28,7 +28,8 @@ cd nd0013_cd2693_Exercise_Starter_Code
 
 Next, select the lesson you want to practice. The sections below outline the lesson-specific instructions.
 
-## Step 2: Practice the Exerciseor the Project
+## Step 2: Practice the Exercises or the Project
+<br />
 
 ### Lesson_2_C++_Checkpoint Exercises
 
