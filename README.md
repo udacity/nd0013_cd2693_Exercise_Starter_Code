@@ -18,7 +18,7 @@ Python3 and Pip
 
 # Instructions
 
-## Fork and Clone the Repository
+## Step 1: Fork and Clone the Repository
 Fork the repository to your Github account and clone it to your local development environment using the following commands:
 
 ```bash
@@ -28,7 +28,9 @@ cd nd0013_cd2693_Exercise_Starter_Code
 
 Next, select the lesson you want to practice. The sections below outline the lesson-specific instructions.
 
-## Lesson_2_C++_Checkpoint Exercises
+## Step 2: Practice the Exerciseor the Project
+
+### Lesson_2_C++_Checkpoint Exercises
 
 Navigate to the individual challenge sub-directory containing the **main.cpp** file. For example, change to the **challenge1/** solution directory.
 
@@ -43,9 +45,9 @@ g++ main.cpp
 ./a.out
 ```
 
-<br />
+<br /><br />
 
-## Lesson_3_Markov_Localization Exercises
+### Lesson_3_Markov_Localization Exercises
 
 Change to the specific exercise directory, compile the **main.cpp** file, and execute the **a.out**. For example, the command below will help you run the  **1-initialize-priors-function** exercise solution. 
 
@@ -61,9 +63,9 @@ g++ main.cpp
 ./a.out
 ```
 
-<br />
+<br /><br />
 
-## Lesson_4_Intro_to_PCL Exercises
+### Lesson_4_Intro_to_PCL Exercises
 
 Refer to the exercise starter files in the [](https://github.com/udacity/SFND_Lidar_Obstacle_Detection) repository. 
 
@@ -99,9 +101,9 @@ Here is the file structure in the Github repository linked above.
 ```
 Refer the [README.md](https://github.com/udacity/SFND_Lidar_Obstacle_Detection#readme) for specific instructions. 
 
-<br />
+<br /><br />
 
-## Lesson_5_Creating_Scan_Matching_Algorithms
+### Lesson_5_Creating_Scan_Matching_Algorithms
 
 ```bash
 cd Lesson_5_Creating_Scan_Matching_Algorithms
@@ -116,11 +118,18 @@ This lesson has the following exercises.
 └── Exercise-Creating-NDT
 ```
 
-The specific commands for each exercise are available in the respective sub-directory. 
+The specific commands for each exercise are available in the respective sub-directory. Follow the instructions per the respective README files.
 
-<br />
+|Exercise|README|
+|---------|---------|
+|Exercise-Intro-to-ICP|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Intro-to-ICP/README.md)|
+|Exercise-Creating-ICP|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Creating-ICP/README.md)|
+|Exercise-Creating-NDT|[README](/Lesson_5_Creating_Scan_Matching_Algorithms/Exercise-Creating-NDT/README.md)|
 
-## Lesson_6_Utilizing_Scan_Matching
+
+<br /><br />
+
+### Lesson_6_Utilizing_Scan_Matching
 
 ```bash
 cd Lesson_6_Utilizing_Scan_Matching
@@ -135,35 +144,24 @@ This lesson has the following exercises.
 └── Exercise-NDT-Alignment
 ```
 
-The specific command for each exercise in available in the respective sub-directory. 
+The specific command for each exercise in available in the respective sub-directory. Follow the instructions per the respective README files.
 
-In addition, update the environment variables, where needed. 
+|Exercise|README|
+|---------|---------|
+|Exercise-ICP-Alignment|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-ICP-Alignment/README.md)|
+|Exercise-NDT-Alignment|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-NDT-Alignment/README.md)|
+|Exercise-Mapping|[README](/Lesson_6_Utilizing_Scan_Matching/Exercise-Mapping/README.md)|
 
-<br />
 
-## Lesson_7_Project_Scan_Matching_Localization
 
-```bash
-cd Lesson_7_Project_Scan_Matching_Localization
-```
+<br /><br />
 
-Compile the project using the following commands. 
+### Lesson_7_Project_Scan_Matching_Localization
 
-```bash
-cd c3-project
-cmake .
-make
-```
-Open a new terminal window and execute the following:
+Navigate to the project starter code director. 
 
 ```bash
-./run_carla.sh
+cd nd0013_cd2693_Exercise_Starter_Code/Lesson_7_Project_Scan_Matching_Localization/c3-project
 ```
 
-Open another Terminal window and execute the following:
-```bash
-./cloud_loc 
-```
-Might have core dump on start up, just rerun if so. Crash doesn't happen more than a couple of times. Here is a glimpse of the running project.
-
-![a glimpse of the running project](./assets/L7_Project.png)
+Follow the instructions per the specific [README](/Lesson_7_Project_Scan_Matching_Localization/c3-project/README.md). 
