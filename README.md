@@ -3,7 +3,7 @@
 ## Dependencies
 Before you practice the exercises in this repository, ensure that your development environment is configured with the following tools and dependencies:
 
-- [CARLA simulator 0.9.9.4](https://github.com/carla-simulator/carla/releases/tag/0.9.9) (Point Cloud Library)
+- [CARLA simulator 0.9.9.4](https://github.com/carla-simulator/carla/releases/tag/0.9.9) 
 - [NICE DCV Server](https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-installing-linux-prereq.html). This step will install Nvidia drivers along with CUDA libraries for the underlying Tesla T4 GPU
 - C++ 
 - Git
@@ -12,7 +12,7 @@ Before you practice the exercises in this repository, ensure that your developme
 - [VSCode](https://code.visualstudio.com/download), or a similar IDE
 - [Eigen Library for C++](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 - [Point Cloud Library](https://pointclouds.org/downloads/)
-Python3 and Pip
+- Python3 and Pip
 - ROS
 
 
