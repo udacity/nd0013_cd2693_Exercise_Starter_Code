@@ -45,9 +45,9 @@
 
 6. Open a new Terminal tab and execute the following command to start the simulator.
 
-```bash
-./run_carla.sh
-```  
+    ```bash
+    ./run_carla.sh
+    ```  
 
 
 7. Open another Terminal tab and execute the following to run the project.
