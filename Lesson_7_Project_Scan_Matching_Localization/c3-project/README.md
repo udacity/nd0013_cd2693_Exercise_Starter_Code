@@ -14,7 +14,6 @@
     ├── c3-main.cpp
     ├── helper.cpp
     ├── helper.h
-    ├── libcarla-install/
     ├── make-libcarla-install.sh
     ├── map.pcd
     ├── map_loop.pcd
@@ -23,7 +22,7 @@
     ```
 
 
-3. Ensure that the **libcarla-install/** folder is present in your current working directory. The folder contains the static binaries built for the target VM workspace environment. If the folder is missing or corrupt, you can regenerate the files using the following command:
+3. Generate **libcarla-install/** folder by executing below commands in order:
     ```bash
     chmod +x make-libcarla-install.sh
     ./make-libcarla-install.sh
