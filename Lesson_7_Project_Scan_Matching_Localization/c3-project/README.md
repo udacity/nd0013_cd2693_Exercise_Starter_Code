@@ -14,7 +14,6 @@
     ├── c3-main.cpp
     ├── helper.cpp
     ├── helper.h
-    ├── libcarla-install/
     ├── make-libcarla-install.sh
     ├── map.pcd
     ├── map_loop.pcd
