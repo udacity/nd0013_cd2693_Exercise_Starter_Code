@@ -23,7 +23,7 @@
     ```
 
 
-3. Ensure that the **libcarla-install/** folder is present in your current working directory. This folder contains the static binaries built for the target VM workspace environment. You will need to regenerate it using the following commands:
+3. Ensure that the **libcarla-install/** folder is present in your current working directory. This folder contains the static binaries built for the target VM workspace environment. You will need to regenerate it using the following commands in order:
     ```bash
     chmod +x make-libcarla-install.sh
     ./make-libcarla-install.sh
